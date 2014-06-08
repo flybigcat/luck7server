@@ -1,0 +1,6 @@
+db.resultscollection.insert({ "id":"Marry", "win":30000, "coin":10, "bet":3, "cash":30, "row1":6, "row2":6, "row3":6})
+
+db.resultscollection.insert({ "id":"larry", "win":4500, "coin":10, "bet":3, "cash":30, "row1":4, "row2":4, "row3":4})
+
+db.resultscollection.insert({ "id":"John", "win":1000, "coin":10, "bet":2, "cash":20, "row1":2, "row2":2, "row3":2})
+
