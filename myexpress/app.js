@@ -82,7 +82,7 @@ var db = monk('localhost:27017/myexpress');
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE",
         "Access-Control-Max-Age": "3600",
-	"Access-Control-Allow-Headers", "x-requested-with"
+	"Access-Control-Allow-Headers": "x-requested-with"
 	})
 	res.json({
 	    id: id,

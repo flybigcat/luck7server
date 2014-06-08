@@ -78,6 +78,12 @@ var db = monk('localhost:27017/myexpress');
 	if(row1 === 6 && row2 === 6 && row3 === 6 && bet === 3) { win =  Math.floor (5000 * cash );}
 
 	//send back json as response to the client 
+	res.set({
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE",
+        "Access-Control-Max-Age": "3600",
+	"Access-Control-Allow-Headers", "x-requested-with"
+	})
 	res.json({
 	    id: id,
             win: win,
