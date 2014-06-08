@@ -84,7 +84,7 @@ var db = monk('localhost:27017/myexpress');
             coin: coin,
             bet: bet,
             cash: cash,
-	    payline:[(6-row1),(6-row),(6-row3)]
+	    payline:[(6-row1),(6-row2),(6-row3)]
         } );
 
 /*******************************Qiao end**************************************/

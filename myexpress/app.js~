@@ -112,7 +112,7 @@ app.get('/tops', function(req, res) {
     var db = req.db;
     var collection = db.get('resultscollection');
 
-       collection.find({}, {limit:3,  sort: [['win', -1]]},function(e,docs){
+       collection.find({}, {limit:10,  sort: [['win', -1]]},function(e,docs){
         res.render('tops', {
             "tops" : docs
         }) });
