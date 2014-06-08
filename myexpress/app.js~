@@ -82,7 +82,7 @@ var db = monk('localhost:27017/myexpress');
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE",
         "Access-Control-Max-Age": "3600",
-	"Access-Control-Allow-Headers", "x-requested-with"
+	"Access-Control-Allow-Headers": "x-requested-with"
 	})
 	res.json({
 	    id: id,
@@ -135,7 +135,7 @@ app.get('/achievements', function(req, res) {
     
     var id = req.param('id');
 
-       collection.find({}, {'id': id,  sort: [['win', -1]]},function(e,docs){
+       collection.find({}, {'id': id, limit:10, sort: [['win', -1]]},function(e,docs){
         res.render('achievements', {
             "awards" : docs
         }) });
