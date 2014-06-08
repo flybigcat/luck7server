@@ -9,5 +9,5 @@ html
     ul
         each top, i in tops
             li
-               = top.id + ' used '+ top.cash + ' won '+ top.win+ ' with ' + ['7','lucky 7','cheery','3 bar','2 bar','1 bar'][6 - top.row1] + ' ' + ['7','lucky 7','cheery','3 bar','2 bar','1 bar'][6 - top.row2] + ' ' + ['7','lucky 7','cheery','3 bar','2 bar','1 bar'][6 - top.row3]
+               = top.id + ' won $'+ top.win/100+ ' : ' + ['7','lucky 7','cheery','3 bar','2 bar','1 bar', 'blank'][6 - top.row1] + ' ' + ['7','lucky 7','cheery','3 bar','2 bar','1 bar', 'blank'][6 - top.row2] + ' ' + ['7','lucky 7','cheery','3 bar','2 bar','1 bar', 'blank'][6 - top.row3] +' with $'+ top.cash/100
 
