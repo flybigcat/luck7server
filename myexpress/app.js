@@ -52,7 +52,7 @@ var db = monk('localhost:27017/myexpress');
 	if(row1 === 4 || row2 === 4 || row3 === 4) { win =  Math.floor (2 * cash );}
 
 	//3 any bar
-	if(( 1 <= row1 && row1 <=3 ) && ( 1 <= row2 && row2 <=3 ) && ( 1 <= row3 && row3 <=3 ) ) { win =   Math.floor (3 * cash * 100);}
+	if(( 1 <= row1 && row1 <=3 ) && ( 1 <= row2 && row2 <=3 ) && ( 1 <= row3 && row3 <=3 ) ) { win =   Math.floor (3 * cash);}
 
 	//any 2 cherry
 	if(row1 === 4 && row2 === 4 ) { win =  Math.floor (10 * cash );}
@@ -118,7 +118,7 @@ app.get('/tops', function(req, res) {
     var db = req.db;
     var collection = db.get('resultscollection');
 
-       collection.find({}, {limit:10,  sort: [['win', -1]]},function(e,docs){
+       collection.find({}, {limit:3,  sort: [['win', -1]]},function(e,docs){
         res.render('tops', {
             "tops" : docs
         }) });
@@ -135,7 +135,7 @@ app.get('/achievements', function(req, res) {
     
     var id = req.param('id');
 
-       collection.find({'id': id}, { limit:3, sort: [['win', -1]]},function(e,docs){
+       collection.find({'id': id}, { limit:10, sort: [['win', -1]]},function(e,docs){
         res.render('achievements', {
             "achievements" : docs
         }) });

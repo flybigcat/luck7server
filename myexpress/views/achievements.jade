@@ -6,4 +6,4 @@ block content
     ul
         each award, i in achievements
             li
-               = award.win + ' ' + ['seven','lucky','cheery','3bar','2bar','1bar'][6 - award.row1] + ' ' + ['seven','lucky','cheery','3bar','2bar','1bar'][6 - award.row2] + ' ' + ['seven','lucky','cheery','3bar','2bar','1bar'][6 - award.row3] + ' ' + award.cash
+               = 'Using '+ award.cash + ', get '+ award.win+ ' with ' + ['7','lucky 7','cheery','3 bar','2 bar','1 bar'][6 - award.row1] + ' ' + ['7','lucky 7','cheery','3 bar','2 bar','1 bar'][6 - award.row2] + ' ' + ['7','lucky 7','cheery','3 bar','2 bar','1 bar'][6 - award.row3]

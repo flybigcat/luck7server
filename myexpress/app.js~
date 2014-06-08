@@ -135,9 +135,9 @@ app.get('/achievements', function(req, res) {
     
     var id = req.param('id');
 
-       collection.find({}, {'id': id, limit:10, sort: [['win', -1]]},function(e,docs){
+       collection.find({'id': id}, { limit:3, sort: [['win', -1]]},function(e,docs){
         res.render('achievements', {
-            "awards" : docs
+            "achievements" : docs
         }) });
 
 //    collection.find({}, {limit:3,  sort: [['win', -1]]},function(e,docs){
